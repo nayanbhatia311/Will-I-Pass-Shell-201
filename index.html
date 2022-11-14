@@ -27,7 +27,7 @@
         finalMarksRequired["A-"]=Aminusgrade.toFixed(2);
         finalMarksRequired["A"]=Agrade.toFixed(2);
         document.getElementById("result_table").classList.remove("d-none");
-        document.getElementById("result_table").classList.add("d-block");
+        document.getElementById("result_table").classList.add("d-table");
 
         let row_A = "<tr><td>A</td><td>"+finalMarksRequired["A"]+"</td></tr>";
         let row_A_ = "<tr><td>A-</td><td>"+finalMarksRequired["A-"]+"</td></tr>";
@@ -39,7 +39,7 @@
     </script>
 </head>
 <body class="container mt-3 ml-3 mr-3">
-    <form name="getUserMarks"> 
+    <form class="row" name="getUserMarks"> 
         <div class="mb-3"> 
             <h1 class="text-center">Will I pass Shel's CSE 201 class? Let's find out!</h1>
         </div>
@@ -63,29 +63,27 @@ Eg. if you have your MA score till MA3, just put scores of MA1,MA2,MA3 and we wi
             <input type="button" onclick="calc()" class="btn btn-primary" value="Submit">
         </div>        
     </form>
-
     <table id="result_table" class="table text-center d-none">
-        <thead class="thead-dark">
-          <tr>
+        <thead class="table-dark">
+        <tr>
             <th scope="col">Grade</th>
             <th scope="col">Marks required in Finals</th>
-          </tr>
+        </tr>
         </thead>
         <tbody id="result_table_body">
-          <tr>
+        <tr>
             <td>Mark</td>
             <td>Otto</td>
-          </tr>
-          <tr>
+        </tr>
+        <tr>
             <td>Thornton</td>
             <td>@fat</td>
-          </tr>
-          <tr>
+        </tr>
+        <tr>
             <td>Larry</td>
             <td>the Bird</td>
-          </tr>
+        </tr>
         </tbody>
-      </table>
-  
+    </table>
   </body>
 </html>
