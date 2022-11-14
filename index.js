@@ -16,19 +16,33 @@
         
         
         // let maMarks_avg=maMarks/30*100;
+        let finalMarksRequired={};
+        finalMarksRequired["B-"]=(80-(maMarks_avg*0.10 + midterm1Marks*0.25 + midterm2Marks*0.25))/0.4;
+        finalMarksRequired["B"]=(83.33-(maMarks_avg*0.10 + midterm1Marks*0.25 + midterm2Marks*0.25))/0.4;
+        finalMarksRequired["B+"]=(86.67-(maMarks_avg*0.10 + midterm1Marks*0.25 + midterm2Marks*0.25))/0.4;
+        finalMarksRequired["A-"]=(90-(maMarks_avg*0.10 + midterm1Marks*0.25 + midterm2Marks*0.25))/0.4;
+        finalMarksRequired["A"]=(93.34-(maMarks_avg*0.10 + midterm1Marks*0.25 + midterm2Marks*0.25))/0.4;
         
-        let finalMarksRequired=(80-(maMarks_avg*0.10 + midterm1Marks*0.25 + midterm2Marks*0.25))/0.4
-        alert(finalMarksRequired);
+        
+        // let finalMarksRequired=(80-(maMarks_avg*0.10 + midterm1Marks*0.25 + midterm2Marks*0.25))/0.4;
+        
+        
+        // alert(finalMarksRequired["B-"]);
+        // alert(finalMarksRequired["B"]);
+        // alert(finalMarksRequired["B+"]);
+        // alert(finalMarksRequired["A-"]);
+        // alert(finalMarksRequired["A"]);
+        
         
     }
     </script>
 </head>
 <body>
     <form name="getUserMarks" onsubmit="return validateForm()">  
-        <h1>Will I pass SHel's CSE 201 class? Let's find out!</h1>
+        <h1>Will I pass Shel's CSE 201 class? Let's find out!</h1>
         <input type="text" name="midterm1" placeholder="Midterm 1 Marks(out of 100)" required> </br> </br>
         <input type="text" name="midterm2" placeholder="Midterm 2 Marks(out of 100)" required> </br> </br>
-        <input type="text" name="ma_array" placeholder="MA's score till now(out of 30) required"> </br></br>
+        <input type="text" name="ma_array" placeholder="MA's score till now(out of 30)" required> </br></br>
         <input type="submit" value="Submit">
         
     </form>
