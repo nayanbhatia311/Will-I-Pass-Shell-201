@@ -48,7 +48,12 @@
         document.getElementById("result_table_body").innerHTML=row_A+row_A_+row_Bp+row_B+row_B_;
         document.getElementById("comment").classList.remove("d-none");
         document.getElementById("comment").classList.add("d-block");
+        if(finalMarksRequired["B-"]>70){
         document.getElementById("comment").innerHTML = "You need atleast " + finalMarksRequired["B-"] + "/100.00 in the finals to pass !";
+        }
+        else{
+        document.getElementById("comment").innerHTML = "Even if you do well in midterms and all the MA's, you still have to get atleast 70 marks in final to pass this course.";
+        }
     }
     </script>
 </head>
