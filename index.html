@@ -3,35 +3,41 @@
 <title>Shel 201 Pass checker</title>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<link rel="stylesheet" href="css/style.css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="css/style.css" />
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+		        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+
     <script>
-        function validateForm() {
-            let maMarks=document.forms["getUserMarks"]["ma_array"].value;
-            maMarksArray=maMarks.split(",").map(Number);
-            maMarks_avg=maMarksArray.reduce((a, b) => a + b, 0) / maMarksArray.length;
-            maMarks_avg=maMarks_avg*100/30
-            // alert(maMarks_avg);
-            
-            
-            // let maMarks_avg=maMarks/30*100;
-            let finalMarksRequired={};
-            finalMarksRequired["B-"]=(80-(maMarks_avg*0.10 + midterm1Marks*0.25 + midterm2Marks*0.25))/0.4;
-            finalMarksRequired["B"]=(83.33-(maMarks_avg*0.10 + midterm1Marks*0.25 + midterm2Marks*0.25))/0.4;
-            finalMarksRequired["B+"]=(86.67-(maMarks_avg*0.10 + midterm1Marks*0.25 + midterm2Marks*0.25))/0.4;
-            finalMarksRequired["A-"]=(90-(maMarks_avg*0.10 + midterm1Marks*0.25 + midterm2Marks*0.25))/0.4;
-            finalMarksRequired["A"]=(93.34-(maMarks_avg*0.10 + midterm1Marks*0.25 + midterm2Marks*0.25))/0.4;
-                    
-            // let finalMarksRequired=(80-(maMarks_avg*0.10 + midterm1Marks*0.25 + midterm2Marks*0.25))/0.4;
-            
-            
-            alert(finalMarksRequired["B-"]);
-            alert(finalMarksRequired["B"]);
-            alert(finalMarksRequired["B+"]);
-            alert(finalMarksRequired["A-"]);
-            alert(finalMarksRequired["A"]);
-        }
+    function validateForm(){
+        let midterm1Marks=document.forms["getUserMarks"]["midterm1"].value;
+        let midterm2Marks=document.forms["getUserMarks"]["midterm2"].value;
+        let maMarks=document.forms["getUserMarks"]["ma_array"].value;
+        maMarksArray=maMarks.split(",").map(Number);
+        maMarks_avg=maMarksArray.reduce((a, b) => a + b, 0) / maMarksArray.length;
+        maMarks_avg=maMarks_avg*100/30
+        // alert(maMarks_avg);
+        
+        
+        // let maMarks_avg=maMarks/30*100;
+        let finalMarksRequired={};
+        finalMarksRequired["B-"]=(80-(maMarks_avg*0.10 + midterm1Marks*0.25 + midterm2Marks*0.25))/0.4;
+        finalMarksRequired["B"]=(83.33-(maMarks_avg*0.10 + midterm1Marks*0.25 + midterm2Marks*0.25))/0.4;
+        finalMarksRequired["B+"]=(86.67-(maMarks_avg*0.10 + midterm1Marks*0.25 + midterm2Marks*0.25))/0.4;
+        finalMarksRequired["A-"]=(90-(maMarks_avg*0.10 + midterm1Marks*0.25 + midterm2Marks*0.25))/0.4;
+        finalMarksRequired["A"]=(93.34-(maMarks_avg*0.10 + midterm1Marks*0.25 + midterm2Marks*0.25))/0.4;
+        
+        
+        // let finalMarksRequired=(80-(maMarks_avg*0.10 + midterm1Marks*0.25 + midterm2Marks*0.25))/0.4;
+        
+        
+        alert(finalMarksRequired["B-"]);
+        alert(finalMarksRequired["B"]);
+        alert(finalMarksRequired["B+"]);
+        alert(finalMarksRequired["A-"]);
+        alert(finalMarksRequired["A"]);
+        
+        
+    }
     </script>
 </head>
 <body class="container mt-3 ml-3 mr-3">
@@ -55,5 +61,6 @@
             <input type="submit" class="btn btn-primary" value="Submit">
         </div>        
     </form>
+  
   </body>
 </html>
