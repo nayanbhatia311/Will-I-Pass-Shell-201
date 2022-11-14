@@ -16,11 +16,16 @@
         maMarks_avg=maMarks_avg*100/30
 
         let finalMarksRequired={};
-        finalMarksRequired["B-"]=(80-(maMarks_avg*0.10 + midterm1Marks*0.25 + midterm2Marks*0.25))/0.4;
-        finalMarksRequired["B"]=(83.33-(maMarks_avg*0.10 + midterm1Marks*0.25 + midterm2Marks*0.25))/0.4;
-        finalMarksRequired["B+"]=(86.67-(maMarks_avg*0.10 + midterm1Marks*0.25 + midterm2Marks*0.25))/0.4;
-        finalMarksRequired["A-"]=(90-(maMarks_avg*0.10 + midterm1Marks*0.25 + midterm2Marks*0.25))/0.4;
-        finalMarksRequired["A"]=(93.34-(maMarks_avg*0.10 + midterm1Marks*0.25 + midterm2Marks*0.25))/0.4;
+        let Bminusgrade=(80-(maMarks_avg*0.10 + midterm1Marks*0.25 + midterm2Marks*0.25))/0.4
+        let Bgrade=(83.33-(maMarks_avg*0.10 + midterm1Marks*0.25 + midterm2Marks*0.25))/0.4;
+        let Bplusgrade=(86.67-(maMarks_avg*0.10 + midterm1Marks*0.25 + midterm2Marks*0.25))/0.4;
+        let Aminusgrade= (90-(maMarks_avg*0.10 + midterm1Marks*0.25 + midterm2Marks*0.25))/0.4;
+        let Agrade=(93.34-(maMarks_avg*0.10 + midterm1Marks*0.25 + midterm2Marks*0.25))/0.4;
+        finalMarksRequired["B-"]=Bminusgrade.toFixed(2);
+        finalMarksRequired["B"]=Bgrade.toFixed(2);
+        finalMarksRequired["B+"]=Bplusgrade.toFixed(2);
+        finalMarksRequired["A-"]=Aminusgrade.toFixed(2);
+        finalMarksRequired["A"]=Agrade.toFixed(2);
         document.getElementById("result_table").classList.remove("d-none");
         document.getElementById("result_table").classList.add("d-block");
 
@@ -68,16 +73,16 @@ Eg. if you have your MA score till MA3, just put scores of MA1,MA2,MA3 and we wi
         </thead>
         <tbody id="result_table_body">
           <tr>
-            <td>Nayan</td>
-            <td>Jayjeet</td>
+            <td>Mark</td>
+            <td>Otto</td>
           </tr>
           <tr>
-            <td>RandomGuyFromPune</td>
-            <td>Random</td>
+            <td>Thornton</td>
+            <td>@fat</td>
           </tr>
           <tr>
-            <td>lol201</td>
-            <td>god_bless_us</td>
+            <td>Larry</td>
+            <td>the Bird</td>
           </tr>
         </tbody>
       </table>
