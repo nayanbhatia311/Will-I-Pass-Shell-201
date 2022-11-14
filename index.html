@@ -21,11 +21,7 @@
         }
         
         maMarksArray=maMarks.split(",").map(Number);
-        for(let i=0; i < maMarksArray.length; i++){
-            if(maMarksArray[i]<0 || maMarksArray[i]>30)
-                alert("MA marks should be in range 0 to 30");
-                return;
-        }
+        
         maMarks_avg=maMarksArray.reduce((a, b) => a + b, 0) / maMarksArray.length;
         
         maMarks_avg=maMarks_avg*100/30
