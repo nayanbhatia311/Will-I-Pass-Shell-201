@@ -11,6 +11,15 @@
         let midterm1Marks=document.forms["getUserMarks"]["midterm1"].value;
         let midterm2Marks=document.forms["getUserMarks"]["midterm2"].value;
         let maMarks=document.forms["getUserMarks"]["ma_array"].value;
+        if(midterm1Marks<0 || midterm1Marks>100 || midterm2Marks<0 || midterm1Marks>100){
+            alert("Midterm marks should be in range 0 to 100");
+            return;
+        }
+        if(midterm1Marks=="" || midterm2Marks=="" || maMarks==""){
+            alert("No empty value");
+            return;
+        }
+        
         maMarksArray=maMarks.split(",").map(Number);
         maMarks_avg=maMarksArray.reduce((a, b) => a + b, 0) / maMarksArray.length;
         maMarks_avg=maMarks_avg*100/30
