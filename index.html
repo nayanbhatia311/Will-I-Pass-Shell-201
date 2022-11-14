@@ -35,6 +35,9 @@
         let row_B = "<tr><td>B</td><td>"+finalMarksRequired["B"]+"</td></tr>";
         let row_B_ = "<tr><td>B-</td><td>"+finalMarksRequired["B-"]+"</td></tr>";
         document.getElementById("result_table_body").innerHTML=row_A+row_A_+row_Bp+row_B+row_B_;
+        document.getElementById("comment").classList.remove("d-none");
+        document.getElementById("comment").classList.add("d-block");
+        document.getElementById("comment").innerHTML = "You need atleast " + finalMarksRequired["B-"] + "/100.00 in the finals to pass !";
     }
     </script>
 </head>
@@ -85,5 +88,8 @@ Eg. if you have your MA score till MA3, just put scores of MA1,MA2,MA3 and we wi
         </tr>
         </tbody>
     </table>
+    <div>
+        <h5 id="comment" class="text-center text-danger d-none"></h5>
+    </div>
   </body>
 </html>
