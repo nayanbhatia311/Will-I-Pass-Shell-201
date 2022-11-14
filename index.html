@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<title>Shel 201 Pass checker</title>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="css/style.css" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script>
+    function validateForm(){
+        let midterm1Marks=document.forms["getUserMarks"]["midterm1"].value;
+        let midterm2Marks=document.forms["getUserMarks"]["midterm2"].value;
+        let maMarks=document.forms["getUserMarks"]["ma_array"].value/30*100;
+        
+        let finalMarksRequired=(80-(maMarks*0.10 + midterm1Marks*0.25 + midterm2Marks*0.25))/0.4;
+        alert(finalMarksRequired);
+    }
+    </script>
+</head>
+<body class="container mt-3 ml-3 mr-3">
+    <form name="getUserMarks" onsubmit="return validateForm()"> 
+        <div class="mb-3"> 
+            <h1 class="text-center">Will I pass Shel's CSE 201 class? Let's find out!</h1>
+        </div>
+        <div class="mb-3">
+            <label for="midterm1" class="form-label">Midterm 1 Marks (Out of 100)</label>
+            <input type="text" class="form-control" id="midterm1" placeholder="Out of 100">
+        </div>
+        <div class="mb-3">
+            <label for="midterm2" class="form-label">Midterm 2 Marks (Out of 100)</label>
+            <input type="text" class="form-control" id="midterm2" placeholder="Out of 100">
+        </div>
+        <div class="mb-3">
+            <label for="ma_array" class="form-label">MA's score till now (Out of 30)</label>
+            <input type="text" class="form-control" id="ma_array" placeholder="Ex: 24,25,26,27,28,29">
+        </div>
+        <div class="mb-3 text-center">
+            <input type="submit" class="btn btn-primary" value="Submit">
+        </div>        
+    </form>
+</body>
+</html>
