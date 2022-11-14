@@ -16,7 +16,7 @@
             return;
         }
         if(midterm1Marks=="" || midterm2Marks=="" || maMarks==""){
-            alert("No empty value");
+            alert("All fields are required");
             return;
         }
         
@@ -24,7 +24,7 @@
         
         maMarks_avg=maMarksArray.reduce((a, b) => a + b, 0) / maMarksArray.length;
         
-        maMarks_avg=maMarks_avg*100/30
+        maMarks_avg=maMarks_avg*100/30;
 
         let finalMarksRequired={};
         let Bminusgrade=(80-(maMarks_avg*0.10 + midterm1Marks*0.25 + midterm2Marks*0.25))/0.4
