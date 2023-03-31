@@ -4,7 +4,7 @@ This program calculates the minimum marks needed to pass Shel's CSE 201 class ba
 
 ## Installation
 
-## No installation is required. Simply download the HTML file and open it in a web browser. Alternatively, you can use the live Website link: https://will-i-pass-shel201.netlify.app  
+No installation is required. Simply download the HTML file and open it in a web browser. Alternatively, you can use the live Website link: https://will-i-pass-shel201.netlify.app  
 
 ## Usage
 
