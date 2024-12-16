@@ -15,5 +15,5 @@ The result will be displayed in a table format.
 
 
 ## Motivation
-In the context of the CSE 201 course with Professor Shel at UCSC, it is widely known that passing the class can be extremely challenging. While the first midterm is typically manageable, anxiety often sets in when preparing for the second one. To help students facing this hurdle, two bored graduate students, Nayan Bhatia(MS CSE) and Jayjeet Chakraborty(PhD CSE), developed a useful tool to calculate the minimum final exam score needed to pass the course.
+In the context of the CSE 201 course with Professor Shel at UCSC, it is widely known that passing the class can be extremely challenging. While the first midterm is typically manageable, anxiety often sets in when preparing for the second one. To help students facing this hurdle, two extremely bored graduate students, Nayan Bhatia and Jayjeet Chakraborty, developed a useful tool to calculate the minimum final exam score needed to pass the course.
 
